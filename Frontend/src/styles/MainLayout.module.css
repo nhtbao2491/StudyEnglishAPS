@@ -1,0 +1,224 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--green-bg);
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: 220px;
+  min-width: 220px;
+  background: white;
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  transition: width 0.22s ease, min-width 0.22s ease;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.sidebarCollapsed {
+  width: 60px;
+  min-width: 60px;
+}
+
+.sidebarTop {
+  height: 64px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-light);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.sidebarCollapsed .sidebarTop {
+  justify-content: center;
+  padding: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.brandIcon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--green-dark);
+}
+
+.collapseBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--green-pale);
+  color: var(--green-dark);
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.collapseBtn:hover { background: var(--green-light); }
+
+.nav {
+  flex: 1;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  color: var(--text-mid);
+  font-weight: 600;
+  font-size: 13.5px;
+  transition: all 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.navItem:hover {
+  background: var(--green-pale);
+  color: var(--green-dark);
+}
+.navItem.active {
+  background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+  color: white;
+  box-shadow: 0 3px 10px rgba(74,124,89,0.25);
+}
+
+.navItemCollapsed {
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.navIcon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.navLabel {
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+
+.sidebarBottom {
+  padding: 10px 8px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  overflow: hidden;
+}
+
+.userInfoCollapsed {
+  justify-content: center;
+  padding: 6px 0;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.userMeta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.userName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userEmail {
+  font-size: 11px;
+  color: var(--text-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  background: var(--pink-light);
+  color: #c0392b;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-main);
+  transition: background 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.logoutBtn:hover { background: var(--pink-soft); }
+
+.logoutCollapsed {
+  justify-content: center;
+  padding: 8px 0;
+}
+
+/* ── MAIN ── */
+.main {
+  margin-left: 220px;
+  transition: margin-left 0.22s ease;
+  height: 100vh;
+  overflow: hidden;
+  width: calc(100% - 220px);
+}
+
+.mainCollapsed {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+}

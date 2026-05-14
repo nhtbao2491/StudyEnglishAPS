@@ -1,0 +1,325 @@
+.page {
+  padding: 28px 32px;
+  min-height: 100vh;
+  background: var(--green-bg);
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 38px;
+  color: var(--green-dark);
+  text-align: center;
+}
+
+.birdLeft, .birdRight {
+  font-size: 36px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.controls {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.controlRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.langWrap {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.langLabel {
+  background: var(--green-pale);
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-mid);
+  white-space: nowrap;
+  border-right: 2px solid var(--border);
+}
+
+.langSelect {
+  padding: 9px 14px;
+  border: none;
+  font-family: var(--font-main);
+  font-size: 13px;
+  color: var(--text-dark);
+  font-weight: 600;
+  background: white;
+  min-width: 130px;
+}
+
+.quizTitle {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-mid);
+}
+
+.quizBtn {
+  background: var(--green-dark);
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 4px 16px rgba(74,124,89,0.35);
+  transition: all 0.2s;
+  line-height: 1.3;
+  text-align: center;
+}
+.quizBtn:hover { transform: scale(1.05); background: var(--green-mid); }
+
+.testRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.randomBtn {
+  background: var(--green-dark);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.randomBtn:hover:not(:disabled) { background: var(--green-mid); }
+.randomBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.wordDisplay {
+  flex: 1;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-dark);
+  text-align: center;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.answerRow {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.answerLabel {
+  background: var(--yellow-soft);
+  color: #92400e;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.answerFields {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.answerField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.answerField span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.answerField input {
+  padding: 8px 12px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-main);
+  background: white;
+  text-align: center;
+}
+.answerField input:focus { border-color: var(--green-mid); outline: none; }
+
+.confirmBtn {
+  background: var(--green-mid);
+  color: white;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 700;
+  align-self: flex-end;
+  transition: background 0.2s;
+}
+.confirmBtn:hover { background: var(--green-dark); }
+
+.scoreBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 28px;
+  background: var(--green-bg);
+  border-top: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.clearBtn {
+  background: var(--cream-dark);
+  color: var(--green-dark);
+  border: 2px solid var(--border);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  transition: all 0.2s;
+}
+.clearBtn:hover { background: var(--green-pale); }
+
+.checkResult {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.progress {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--green-dark);
+  background: white;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border);
+}
+
+.tableWrap {
+  overflow-x: auto;
+  padding: 20px 28px;
+}
+
+.table {
+  min-width: 900px;
+}
+
+.table thead tr:first-child {
+  background: var(--cream-dark);
+}
+
+.table thead th {
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+}
+
+.yourCol { background: var(--pink-light); }
+.correctCol { background: var(--green-pale); }
+
+.subheader td {
+  padding: 6px 14px;
+  font-size: 11px;
+  color: var(--text-light);
+  font-style: italic;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  background: var(--green-bg);
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.table tbody td {
+  padding: 9px 14px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.trueRow { background: #f0fdf4; }
+.falseRow { background: #fff5f5; }
+
+.trueTag {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.falseTag {
+  background: var(--pink-soft);
+  color: #c0392b;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.wrong {
+  background: var(--pink-light);
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.vocabCell {
+  font-weight: 700;
+  text-align: left !important;
+}
