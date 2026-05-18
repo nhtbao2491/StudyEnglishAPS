@@ -213,12 +213,13 @@
 .main {
   margin-left: 220px;
   transition: margin-left 0.22s ease;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-y: auto;
   width: calc(100% - 220px);
 }
 
 .mainCollapsed {
   margin-left: 60px;
   width: calc(100% - 60px);
+  overflow-y: auto;
 }

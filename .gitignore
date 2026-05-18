@@ -4,31 +4,35 @@
 bin/
 obj/
 .vs/
+*.user
+*.suo
 
 # =========================
-# Frontend (React)
+# Frontend (React / Vite)
 # =========================
 node_modules/
-build/
 dist/
+build/
 coverage/
+.vite/
 
 # =========================
 # Environment
 # =========================
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 
 # =========================
-# Logs
+# Logs / Cache
 # =========================
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+.cache/
+.eslintcache
 
 # =========================
 # OS / Editor
@@ -37,3 +41,9 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# =========================
+# Temp
+# =========================
+tmp/
+temp/

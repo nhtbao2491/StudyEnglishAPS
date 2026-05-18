@@ -7,8 +7,10 @@ import styles from '../styles/MainLayout.module.css';
 const NAV_ITEMS = [
   { path: '/dashboard', label: 'Dashboard', icon: 'dashboard' },
   { path: '/vocab-list', label: 'Vocab List', icon: 'book' },
+  { path: '/phrases', label: 'Phrases', icon: 'puzzle' },
   { path: '/vocab-test', label: 'Vocab Test', icon: 'pen' },
   { path: '/vocab-review', label: 'Vocab Review', icon: 'refresh' },
+  { path: '/flashcard', label: 'FlashCard', icon: 'zap' },
 ];
 
 export default function MainLayout() {
